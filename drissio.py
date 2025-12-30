@@ -637,11 +637,11 @@ class BrowserAutomation:
             max_retries = self.browser_config["max_retries"]
 
         # 在Docker环境中进行网络连接测试
-        if self._is_running_in_docker():
-            log.info(f"Docker环境检测到，进行网络连接测试: {url}")
-            if not self._test_network_connectivity(url):
-                log.error(f"网络连接测试失败，无法访问: {url}")
-                return ""
+        #if self._is_running_in_docker():
+            #log.info(f"Docker环境检测到，进行网络连接测试: {url}")
+            #if not self._test_network_connectivity(url):
+                #log.error(f"网络连接测试失败，无法访问: {url}")
+                #return ""
 
         retry_count = 0
 
